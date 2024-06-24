@@ -1,0 +1,730 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fontes/Ubuntu-Regular.ttf') format('truetype');
+}
+/*menu lateral da aplicação*/
+.menu-lateral{
+  width: 60px;
+  background: var(--Default, #649FBF);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+.box-detalhe-menu{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+  top: 40px 
+}
+.box-menu-lateral-icone{
+  background: #FFFFFFCC;
+  width: 35px;
+  height: 35px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px 5px 5px 5px;
+  margin-top: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.box-menu-lateral-icone.selected::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: white;
+}
+/*Home passo1 - perfil*/
+.texto-perfil{
+  color: var(--Medium-gray, rgba(149, 149, 149, 1));
+  font-size: 1em;
+  text-align: left;
+  line-height: 19.55px;
+  padding: 10px;
+}
+.box-img-perfil{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 30px 
+}
+.icone-img-menu-lateral{
+  width: 55%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*css menu passos*/
+.box-menu-superior{
+  width: 100%;
+  height: 140px;
+  border-radius: 20px 20px 20px 20px;
+  opacity: 0px;
+  background: var(--Pure, #FFFFFF);
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-menu-interno{
+  width: 80%;
+}
+.box-icone-ativo{
+  width: 64px;
+  height: 64px;
+  margin-left:2%;
+  margin-right: 2%;
+  border-radius: 20px 20px 20px 20px;
+  opacity: 0px;
+  background-color: #649FBF;
+  border: 2px solid var(--Default, #272F33);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.box-icone-concluido{
+  width: 64px;
+  height: 64px;
+  margin-left:2%;
+  margin-right: 2%;
+  border-radius: 20px 20px 20px 20px;
+  opacity: 0px;
+  background-color: #649FBF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-icone-desativado{
+  width: 64px;
+  height: 64px;
+  margin-left:2%;
+  margin-right: 2%;
+  border-radius: 20px 20px 20px 20px;
+  opacity: 0px;
+  background-color: #DBDBDB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.passo-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+}
+.linha-menu{
+  position: absolute;
+  width: 59%;
+  z-index: 1;
+}
+.icone-menu{
+  width: 50%;
+  z-index: 2;
+}
+.info-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.titulo-menu{
+  color: var(--Default, rgba(100, 159, 191, 1));
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 500;
+  width: 64px;
+  height: 64px;
+  margin-left:2%;
+  margin-right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.concluido{
+  color: #272F33;
+}
+/*Home passo1 - listagem funcionarios*/
+.box-form{
+  background-color: #FFFFFF;
+  z-index: 2;
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+}
+.titulo-form{
+  width: 100%;
+  height: 56px;
+  border-radius: 20px 20px 0px 0px;
+  opacity: 0px;
+  background: var(--Default, #649FBF);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-family: Ubuntu;
+  font-weight:400 
+}
+.titulo-form img{
+  cursor: pointer;
+}
+.botao-form{
+  width: 90%;
+  height: 66px;
+  gap: 0px;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--Default, #649FBF);
+  background-color: #FFFFFF;
+  color: var(--Default, #649FBF);
+  font-family: Ubuntu;
+  font-weight:400 
+}
+.box-cadastro-listagem{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.botoes-filtro{
+  width: 90%;
+  text-align: start;
+}
+.botoes-filtro span{
+  float: right;
+  padding: 5px;
+  font-family: Ubuntu;
+  font-weight:400;
+  color: #3A3A3A;
+}
+.botao-ativo{
+  width: 35%;
+  height: 36px;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  background-color: #FFFFFF;
+  color: #649FBF;
+  border: 1px solid var(--Default, #649FBF);
+  font-family: Ubuntu;
+  font-weight:400 
+}
+.botao-limpar{
+  width: 35%;
+  height: 36px;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  background-color: #FFFFFF;
+  color: var(--Medium-gray, #959595);
+  border: 1px solid var(--Medium-gray, #959595);
+  margin-left: 20px;
+  font-family: Ubuntu;
+  font-weight:400 
+}
+.box-tabela{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px 
+}
+.tabela{
+  width: 90%;
+}
+.tabela .func-ativo{
+  list-style-type: none;
+  padding: 10px;
+  position: relative;
+  background: var(--Blue-20, #649FBF33);
+  margin-top: 10px;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.tabela .func-desativado{
+  list-style-type: none;
+  padding: 10px;
+  position: relative;
+  background: var(--Blue-20, #FFFFFF);
+  margin-top: 10px;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid var(--Medium-light-gray, #DBDBDB);
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.tabela ul{
+  padding: 0px;
+}
+.tabela label{
+  display: flex;
+  font-family: Ubuntu;
+  font-weight:400;
+  color: var(--Dark-gray, #707070);
+  font-size: 24px;
+}
+.box-info-geral{
+  display: flex;
+}
+.info-table{
+  width: 130px;
+  height: 30px;
+  border-radius: 36px 36px 36px 36px;
+  opacity: 0px;
+  background: var(--Default, #649FBF);
+  margin: 3px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Ubuntu;
+  font-weight:400;
+}
+.box-info{
+  display: flex;
+  width: 90%;
+}
+.botao-table{
+  width: 20%;
+  background: var(--Default, #649FBF);
+  height: 100%;
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 48px;
+  border-radius: 0px 10px 10px 0px;
+}
+.botao-table img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dropdown-menu {
+  font-family: Ubuntu;
+  font-weight:400;
+}
+.dropdown-item {
+  color: #959595;
+}
+.botao-anterior-etapas{
+  display: flex;
+  align-items: start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.botao-proximo{
+  width: 194px;
+  height: 32px;
+  border-radius: 10px 10px 10px 10px;
+  opacity: 0px;
+  background: var(--Default, #649FBF);
+  color: #FFFFFF;
+  border: 1px solid #649FBF;
+  text-align: center;
+  float: inline-end;
+  margin-bottom: 10px;
+}
+.botao-anterior{
+  width: 194px;
+  height: 32px;
+  border-radius: 10px 10px 10px 10px;
+  opacity: 0px;
+  background: var(--Default, #649FBF);
+  color: #FFFFFF;
+  border: 1px solid #649FBF;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/*etapa concluida*/
+.toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 70px;
+  height: 25px;
+  border: 1px solid #6c757d;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 13px;
+  background: var(--Medium-light-gray, #DBDBDB);
+}
+.sem-funcionarios{
+  text-align: center;
+  font-family: Ubuntu;
+  color:#272F33;
+  background-color: #DBDBDB;
+  padding: 20px;
+  border-radius: 10px 10px 10px 10px;
+}
+/*Home passo1 - formulario funcionarios*/
+.form-container {
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--Default, #649FBF);
+  font-family: Ubuntu;
+}
+.box-sessao{
+  display: flex;
+  align-items: center;
+}
+.box-radio-button{
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+.box-radio-button input[type="radio"] {
+  border: '2px solid #649FBF';
+}
+.custom-select {
+  position: relative;
+}
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  width: 100%;
+  padding-right: 30px;
+}
+.custom-select::after {
+  content: '▼';
+  font-size: 12px;
+  position: absolute;
+  bottom: 50%;
+  top: 60%;
+  transform: translateY(-50%);
+  right: 25px;
+  pointer-events: none;
+}
+/*checkbox*/
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+.custom-checkbox label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+}
+.custom-checkbox label::before, .custom-checkbox label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.custom-checkbox label::before {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #649FBF;
+  border-radius: 3px;
+  background: #fff;
+}
+.custom-checkbox input[type="checkbox"]:checked + label::after {
+  content: '✓';
+  font-size: 16px;
+  color: #649FBF;
+  left: 2px;
+}
+.custom-checkbox input[type="checkbox"]:checked + label::before {
+  background: #fff;
+  border-color: #649FBF;
+}
+.botao-form-cadastro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.botao-form-cadastro button{
+  width: 100%;
+  height: 40px;
+  opacity: 0px;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.09px;
+  color: var(--Default, #649FBF);
+  padding: 5px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid var(--Default, #649FBF) ;
+}
+.toggle-button-cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 80px;
+  height: 25px;
+  border: 1px solid #6c757d;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 13px;
+  background: var(--Medium-light-gray, #DBDBDB);
+}
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--Default, #649FBF);
+  padding-right: 5px;
+}
+.text {
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+  color: #3A3A3A;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: Ubuntu;
+  font-weight:300 
+}
+.toggle-button:hover .circle {
+  transform: scale(1.2);
+}
+.toggle-button:hover .text {
+  color: #3A3A3A;
+}
+.box-botao-confirmacao{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.box-botao-interno span{
+  color: #3A3A3A;
+  font-family: Ubuntu;
+  font-weight:300;
+  padding-right: 10px;
+}
+.box-botao-interno{
+  width: 90%;
+  display: flex;
+  justify-content: end;
+}
+/*Home passo 2 e demais*/
+.passo-container {
+  height: 80vh;
+  
+}
+.passo-container-filho{
+  z-index: 2;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 20px 20px 20px 20px;
+  margin-top: 20px;
+}
+/*pagina 2 e demais*/
+.box-breve{
+  background: #4FA1C1;
+  width: 100%;
+  height: 55px;
+  padding: 0;
+  margin: 0;
+  border-radius: 20px 20px 20px 20px;
+  opacity: 0px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-family: Ubuntu;
+  font-weight:400;
+  font-size: 28px;
+}
+.tela-full{
+  height: 100vh;
+  position: relative;
+}
+/*geral*/
+.imagem-fundo{
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  z-index: 1;
+}
+.box-botao-etapas{
+  z-index: 2;
+  position: relative;
+  margin-top: 15px
+}
+.config-modal{
+  text-align: center;
+  font-family: Ubuntu;
+  color:#272F33;
+}
+.config-modal-2{
+  background-color: #DBDBDB;
+}
+
+.box-icone-menu-celular{
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /*memu passos*/
+  .linha-menu{
+    position: absolute;
+    width: 65%;
+  }
+  .box-menu-interno{
+    width: 95%;
+  }
+  .icone-menu-celular{
+    width: 25px;
+  }
+  /*menu lateral celular*/
+  .box-icone-menu-celular{
+    border:1px solid #DBDBDB;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    top: 8px;
+    left: 5px;
+    z-index: 6;
+    height: 30px;
+    background-color: #4FA1C1;
+    border-radius: 5px;
+    box-shadow: 0px 6px 8px 0px #00000059;
+    position: fixed;
+  }
+  .menu-lateral {
+    transform: translateX(-100%);
+  }
+  .menu-lateral.open {
+    transform: translateX(0);
+  }
+
+}
+@media only screen and (max-width: 600px) {
+    .box-icone {
+      width: 30px;
+      height: 30px;
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+  /*menu*/
+  .icone-menu{
+      width: 70%;
+  }
+  .box-icone-ativo{
+      width: 30px;
+      height: 30px;
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+  .box-icone-desativado{
+      width: 30px;
+      height: 30px;
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+  .titulo-menu{
+      width: 30px;
+      height: 30px;
+      font-size: 12px;
+      margin-left: 5px;
+      margin-right: 5px;
+      font-size: 12px;
+  }
+  .concluido{
+      font-size: 12px;
+  }
+  .box-menu-superior{
+      height: 100px;
+  }
+  .box-menu-interno{
+      width: 100%;
+  }
+  .linha-menu{
+      position: absolute;
+      width: 60%;
+  }
+  .botao-form{
+      width: 95%;
+  }
+  .botoes-filtro{
+      width: 95%;
+  }
+  .tabela{
+      width: 95%;
+  }
+  .botao-limpar{
+      width: 30%;
+      font-size: 12px;
+      margin-left: 5px;
+      padding: 0px;
+  }
+  .botao-ativo{
+      width: 40%;
+      font-size: 12px;
+  }
+  .botoes-filtro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .box-info{
+      flex-direction: column;
+  }
+  .info-table{
+      margin: 3px;
+  }
+  .dropdown-menu {
+      position: absolute;
+      top: 50px;
+      left: -30px;
+      transform: translateX(-50%);
+      width: 50%;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background-color: #fff;
+      z-index: 1000;
+  }
+
+}
+@media only screen and (max-width: 400px) {
+  .titulo-menu{
+      font-size: 8px;
+ }
+  .concluido{
+      font-size: 8px;
+ }
+}
+
+@media only screen and (min-width: 1200px) {
+  .linha-menu{
+    width: 50%;
+  }
+}
+
