@@ -1,6 +1,6 @@
-# Nome do Projeto
+# Descrição do Projeto
 
-Este repositóio será desitinado a elaboração e manutenção do  sistema de OPT-in em cartões de crédido.
+Este repositório será destinado a elaboração e manutenção do front-end sistema de OPT-in em cartões de crédido.
 
 ## Índice
 - [Dependências](#sobre)
